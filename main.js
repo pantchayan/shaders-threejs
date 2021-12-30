@@ -3,7 +3,7 @@ import testVertexShader from "./shaders/test/vertex.js";
 import testFragmentShader from "./shaders/test/fragment.js";
 const textureLoader = new THREE.TextureLoader();
 
-let bgTexture = textureLoader.load("./orange-bg.jpg");
+let bgTexture = textureLoader.load("./assets/orange-bg.jpg");
 
 const canvas = document.querySelector("canvas");
 const sizes = { width: window.innerWidth, height: window.innerHeight };
