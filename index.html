@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SHADERS</title>
+</head>
+<style>
+    * {
+        padding: 0;
+        margin: 0;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+
+    .webgl {
+        position: fixed;
+    }
+
+    main{
+        z-index: 10;
+        height: 100vh;
+        width: 100vw;
+        display: flex;
+        align-items: center;
+        position: absolute;
+    }
+
+    .container{
+        margin: 4em;
+        max-width: 30vw;
+    }
+    h1{
+        font-size: 100px;
+        color: white;
+    }
+    h2{
+        font-size: 30px;
+        margin-top: 1em;
+        color: white;
+    }
+</style>
+
+<body>
+    <main>
+        <div class="container">
+
+            <h1>Peel The Orange</h1>
+            <h2>Feel The Rush.</h2>
+        </div>
+    </main>
+    <canvas class="webgl"></canvas>
+    <script>
+
+        document.addEventListener("visibilitychange", function () {
+            if (document.hidden) {
+                console.log("Browser tab is hidden")
+            } else {
+
+                console.log("Browser tab is visible")
+                location.reload();
+            }
+        });
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r126/three.min.js"
+        integrity="sha512-n8IpKWzDnBOcBhRlHirMZOUvEq2bLRMuJGjuVqbzUJwtTsgwOgK5aS0c1JA647XWYfqvXve8k3PtZdzpipFjgg=="
+        crossorigin="anonymous"></script>
+    <script src="main.js" type="module"></script>
+</body>
+
+</html>
