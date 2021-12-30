@@ -26,16 +26,15 @@ scene.background = bgTexture; //new THREE.Color('orange')
 
 const sphereGeometry = new THREE.IcosahedronBufferGeometry(2, 4); // 2 to 7
 const count = sphereGeometry.attributes.position.count;
-console.log(count);
+// console.log(count);
 const randoms = new Float32Array(count);
 for (let i = 0; i < count; i++) {
   randoms[i] = Math.random();
 }
-console.log(sphereGeometry);
+// console.log(sphereGeometry);
 sphereGeometry.setAttribute("aRandom", new THREE.BufferAttribute(randoms, 1));
 sphereGeometry.setAttribute("aColor", new THREE.BufferAttribute(randoms, 1));
 
-console.log(sphereGeometry);
 
 const sphereMaterial = new THREE.RawShaderMaterial({
   vertexShader: testVertexShader,
